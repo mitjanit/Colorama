@@ -1,0 +1,575 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sce",
+				"sceneWidth"
+			],
+			[
+				"dis",
+				"distance"
+			],
+			[
+				"min",
+				"minValue"
+			],
+			[
+				"displa",
+				"displayCentroid"
+			],
+			[
+				"displ",
+				"displayCentroid"
+			],
+			[
+				"cen",
+				"centroid"
+			],
+			[
+				"OUTBAC",
+				"OUTBACK"
+			],
+			[
+				"INBA",
+				"INBACK"
+			],
+			[
+				"OUTELA",
+				"OUTELASTIC"
+			],
+			[
+				"INEL",
+				"INELASTIC"
+			],
+			[
+				"num",
+				"numCol"
+			],
+			[
+				"line",
+				"lineLength"
+			],
+			[
+				"mag",
+				"magnitude"
+			],
+			[
+				"INOUTELAS",
+				"INOUTELASTIC"
+			],
+			[
+				"im",
+				"imageName"
+			],
+			[
+				"load",
+				"loadimage\tloadImage"
+			],
+			[
+				"sclae",
+				"scale\tscale"
+			],
+			[
+				"rad",
+				"radt"
+			],
+			[
+				"cons",
+				"constrain\tconstrain"
+			],
+			[
+				"c_",
+				"c_a"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"get",
+				"getBestGradient"
+			],
+			[
+				"G",
+				"GeneticGradient"
+			],
+			[
+				"set",
+				"setValue"
+			],
+			[
+				"mutat",
+				"mutateRate"
+			],
+			[
+				"Mut",
+				"Mutation"
+			],
+			[
+				"mu",
+				"Mutation"
+			],
+			[
+				"mut",
+				"mutateRate"
+			],
+			[
+				"stop",
+				"stopEvolution"
+			],
+			[
+				"top",
+				"topScoreAngleTarget"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"topSC",
+				"topScoreEquilateral"
+			],
+			[
+				"topS",
+				"topScoreDistCentroide"
+			],
+			[
+				"score",
+				"topScoreAngle"
+			],
+			[
+				"ba",
+				"background\tbackground grey"
+			],
+			[
+				"ang",
+				"angleTarget"
+			],
+			[
+				"angle",
+				"angleTartget"
+			],
+			[
+				"max",
+				"maxRadius"
+			],
+			[
+				"sco",
+				"scoreEquilateral"
+			],
+			[
+				"disa",
+				"distances"
+			],
+			[
+				"len",
+				"length-1"
+			],
+			[
+				"sc",
+				"scoreDistCentroide"
+			],
+			[
+				"an",
+				"angleTarget"
+			],
+			[
+				"mouse",
+				"mouse\tmousePressed"
+			],
+			[
+				"click",
+				"clickedOn"
+			],
+			[
+				"pop",
+				"popMax"
+			],
+			[
+				"rollO",
+				"rolloverOn"
+			],
+			[
+				"ellipse",
+				"ellipseMode\tellipseMode"
+			],
+			[
+				"life",
+				"lifeCounter"
+			],
+			[
+				"cona",
+				"contains"
+			],
+			[
+				"obs",
+				"obs"
+			],
+			[
+				"po",
+				"population"
+			],
+			[
+				"new",
+				"newgenes"
+			],
+			[
+				"fitnes",
+				"fitnessNormal"
+			],
+			[
+				"gene",
+				"geneCounter"
+			],
+			[
+				"app",
+				"applyForce"
+			],
+			[
+				"begin",
+				"beginshape\tbeginShape"
+			],
+			[
+				"best",
+				"bestPhrase"
+			],
+			[
+				"dist",
+				"distGreen"
+			],
+			[
+				"text",
+				"text\ttext stringdata"
+			],
+			[
+				"muta",
+				"mutationRate"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"setu",
+				"setup\tsetup"
+			],
+			[
+				"ler",
+				"lerpcolor\tlerpColor"
+			],
+			[
+				"back",
+				"background\tbackground grey"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					""
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Re-run sketch"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch (Processing 3 only)"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch fullscreen"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Export sketch as application"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Kill running sketches"
+				]
+			],
+			[
+				"Packages/Processing/Build Systems/Processing.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst\ta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/GITHUB/Colorama",
+		"/D/GITHUB/Colorama/Colorama"
+	],
+	"file_history":
+	[
+		"/D/GITHUB/Colorama/Colorama/colorama 01/ColorImage.pde",
+		"/D/GITHUB/Colorama/Colorama/colorama 01/build.pde",
+		"/D/GITHUB/Colorama/Colorama/README.md",
+		"/D/GITHUB/Colorama/colorama 01/build/Color.pde",
+		"/C/Users/ToniMitjanit/Desktop/exportacioDadesCentre.xml",
+		"/C/Users/ToniMitjanit/Desktop/emailsAlumnes.txt",
+		"/D/GITHUB/BinaryTree/Binary-Tree/BinaryTree/binaryTree 03/build/Color.pde",
+		"/C/Users/ToniMitjanit/Desktop/logNousProfes.txt",
+		"/C/Users/ToniMitjanit/Downloads/exportacioDadesCentre (2).xml",
+		"/C/Users/ToniMitjanit/Desktop/profesNOUS001.xml",
+		"/C/Users/ToniMitjanit/Downloads/exportacioDadesCentre.xml",
+		"/D/GITHUB/BinaryTree/Binary-Tree/BinaryTree/binaryTree 02/build/Node.pde",
+		"/D/GITHUB/BinaryTree/Binary-Tree/BinaryTree/binaryTree 02/build/Tree.pde",
+		"/D/GITHUB/BinaryTree/Binary-Tree/BinaryTree/binaryTree 02/build/build.pde",
+		"/D/GITHUB/BinaryTree/Binary-Tree/BinaryTree/README.md",
+		"/D/GITHUB/DotSystem/DotSystem/build/Ease.pde",
+		"/D/GITHUB/DotSystem/DotSystem/README.md",
+		"/D/GITHUB/DotSystem/DotSystem/build/build.pde",
+		"/C/Users/ToniMitjanit/Desktop/easing.js",
+		"/D/GITHUB/DotSystem/DotSystem/build/DotLine.pde",
+		"/D/GITHUB/DotSystem/DotSystem/DotLine.pde",
+		"/D/GITHUB/DotSystem/DotLine.pde",
+		"/D/SKETCHES/shape01/build/build.pde",
+		"/D/SKETCHES/shape03/build/build.pde",
+		"/D/SKETCHES/img lines 01/build/build.pde",
+		"/D/SKETCHES/shape05/build/build.pde",
+		"/D/SKETCHES/shape04/build/build.pde",
+		"/D/SKETCHES/shape02/build/build.pde",
+		"/D/SKETCHES/Belousov 01/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 06 - GA - Color Gradient - POO/build/Max Fitness",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 13 - GA - Generic/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 13 - GA - Generic/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 06 - GA - Color Gradient - Draw/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 12 - GA - Evo Polys/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 05 - GA - Grey Gradient - Draw/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 12 - GA - Evo Polys/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 12 - GA - Evo Polys/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 10 - GA - Evo Triangles/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 11 - GA - Evo Quads/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 11 - GA - Evo Quads/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 11 - GA - Evo Quads/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 02 - GA/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 10 - GA - Evo Triangles/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 10 - GA - Evo Triangles/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/vectors 01 - angle between/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 07 - basic rockets/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 07 - basic rockets/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 04 - GA - Color Gradient/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 08 - rockets with obstacles/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 09 - faces interactive selection/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 09 - faces interactive selection/build/Rectangle.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 09 - faces interactive selection/build/Button.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 09 - faces interactive selection/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 09 - faces interactive selection/build/Face.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 09 - faces interactive selection/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 08 - rockets with obstacles/build/Obstacle.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 08 - rockets with obstacles/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 08 - rockets with obstacles/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 08 - rockets with obstacles/build/Rocket.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 07 - basic rockets/build/Rocket.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 07 - basic rockets/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 06 - GA - Color Gradient - Draw/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 06 - GA - Color Gradient - Draw/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 05 - GA - Color Gradient - Draw/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 05 - GA - Color Gradient - Draw/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 03 - GA - Grey/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 04 - GA - Color Gradient/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 04 - GA - Color Gradient/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 05 - GA - Color Gradient - Draw/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 03 - GA - Grey/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 02 - GA/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 03 - GA - Grey/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 02 - GA/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 03 - GA - Color/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 03 - GA - Color/build/GA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 03 - GA - Color/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 01/build/build.pde",
+		"/D/NATURE of CODE/Unit 09 - Evolution/evo 01/build/DNA.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/noise 01/build/build.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/walker 02/build/build.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/splatter 01/build/build.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/splatter 01/build/Splatter.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/walker 02/build/Walker.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/walker 04/build/Walker.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/walker 04/build/build.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/walker 03/build/Walker.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/walker 03/build/build.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/walker 01/build/build.pde",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/walker 01/build/Walker.pde",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Users/ToniMitjanit/Desktop/cd_catalog.xml",
+		"/C/wamp/apps/phpmyadmin3.5.1/config.inc.php",
+		"/D/NATURE of CODE/Unit 01 - Random Walkers/random 01/build/build.pde"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 73.6
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 169.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Processing/Build Systems/Processing.sublime-build",
+	"project": "colorama.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\GENETYPO\\genetypo.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 286.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
