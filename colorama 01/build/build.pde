@@ -6,6 +6,8 @@ int    sceneHeight  = 1080;
 color  bgColor    = #ECECEC;
 String pathDATA = "../../data/";
 
+//********************** Color Management ***********************//
+ColorImage colImage;
 
 //********************** Basic Settings ***********************//
 
@@ -15,4 +17,10 @@ void settings() {
 
 void setup(){
 	background(bgColor);
+
+	colImage = new ColorImage(5, )
+}
+
+void draw(){
+
 }
