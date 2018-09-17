@@ -5,4 +5,8 @@ class Color {
 	Color(color c){
 		this.c = c;
 	}
+
+	color getColor(){
+		return this.c;
+	}
 }
