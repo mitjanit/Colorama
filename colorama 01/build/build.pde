@@ -23,4 +23,6 @@ void setup(){
 
 void draw(){
 
+	image(colImage.getImage(), 0, 0);
+
 }
