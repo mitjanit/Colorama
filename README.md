@@ -5,3 +5,9 @@
 	<li>Crea llista de colors aleatòria basada en imatge.</li>
 	<li>Crea llista de colors espaiada basada en imatge.</li>
 </ul>
+
+<h2>Exemples</h2>
+<ol>
+	<li>Paleta de colors aleatoris extreta d'una imatge gradient que flueix al llarg del temps.</li>
+	<li>Paleta de colors equidistants extreta d'una imatge gradient que flueix al llarg del temps.</li>
+</ol>
