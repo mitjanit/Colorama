@@ -59,4 +59,7 @@ void keyPressed(){
 	else if(key=='2'){
 		createAllPalettes(fileNames[2]);
 	}
+	else if(key=='p'){
+		saveFrame("frame/colorama01-######.png");
+	}
 }

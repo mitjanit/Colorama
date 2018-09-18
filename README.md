@@ -8,7 +8,9 @@
 
 <h2>Exemples</h2>
 <ol>
-	<li>Paleta de colors aleatoris fluent. Colors extrets d'una imatge.</li>
+	<li>Paleta de colors aleatoris fluent.</li>
+	<p> Colors extrets d'una imatge de forma aleatòria.</p>
+	<img src="colorama01/build/frame/colorama01-000157.png" />
 	<li>Paleta de colors equidistants fluent. Colors extrets d'una imatge.</li>
 </ol>
 
