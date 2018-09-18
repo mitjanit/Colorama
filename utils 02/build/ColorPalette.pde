@@ -2,8 +2,6 @@
 class ColorPalette extends ColorBasics {
 	
 
-
-
 	int[] Monochromatic(String hex) {
 		
 		currentType = 0;

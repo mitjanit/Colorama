@@ -8,11 +8,11 @@
 
 <h2>Exemples</h2>
 <ol>
-	<li>Paleta de colors aleatoris extreta d'una imatge gradient que flueix al llarg del temps.</li>
-	<li>Paleta de colors equidistants extreta d'una imatge gradient que flueix al llarg del temps.</li>
+	<li>Paleta de colors aleatoris fluent. Colors extrets d'una imatge.</li>
+	<li>Paleta de colors equidistants fluent. Colors extrets d'una imatge.</li>
 </ol>
 
 <h2>Utilitats</h2>
 <ol>
-	<li>Paleta de colors extreta d'una imatge basada en freqüència.</li>
+	<li>Paleta de colors basada en freqüència. Colors extrets d'una imatge.</li>
 </ol>
