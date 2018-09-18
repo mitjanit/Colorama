@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"loa",
+				"loadpixels\tloadPixels"
+			],
+			[
+				"hex",
+				"hexColor"
+			],
+			[
+				"Arra",
+				"ArrayList"
+			],
+			[
 				"update",
 				"updateColorPosition"
 			],
@@ -309,22 +321,25 @@
 			}
 		},
 		{
-			"file": "colorama 01/build/PaletteImage.pde",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 2381,
+				"buffer_size": 447,
 				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "class Palette {"
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "colorama 01/build/Color.pde",
+			"contents": " \nimport java.util.*;\nimport java.util.HashMap;\nimport java.util.Map;\nimport java.util.TreeMap;\n \nstatic final int QTY = 5, VARIATION = 50;\nfinal color[] dominantArr = new color[QTY];\nfinal IntDict dominantDict = new IntDict(QTY);\n \nIntDict sortedDict;\n\nfinal Map<Integer, Integer> dominantMap =\n  new LinkedHashMap<Integer, Integer>(QTY, 1.0);\n \nMap<Integer, Integer> unsortMap, sortedMap;\nPImage pic;\nint len;\n\ncolor[] palette;\n \nvoid setup() {\n\n  size(800, 600);\n  noLoop();\n \n  pic = loadImage(\"forest01.jpg\"); //createImage(width, height, ARGB);\n  len = pic.pixels.length;\n\n  palette = new color[QTY];\n\n  unsortMap = countColorsIntoMap(pic);\n\n  sortedMap = sortByValue(unsortMap);\n\n\n            System.out.println(\"Key : \" + hex(entry.getKey()) \n        + \" Value : \" + entry.getValue());\n        }\n  /*sortedMap = sortMapByValues(map);\n \n  //dominantMap.clear();\n  java.util.Arrays.fill(dominantArr, 0);\n \n  println(\"\\nUnique colors found:\", map.size(), \"\\tfrom:\", len, ENTER);\n \n  int idx = 0;\n  for (final Entry<Integer, Integer> colors : sortedMap.entrySet()) {\n    dominantMap.put(dominantArr[idx] = colors.getKey(), colors.getValue());\n    if (++idx == QTY)  break;\n  }\n \n  idx = 0;\n  int n=0;\n  for (final Entry<Integer, Integer> colors : dominantMap.entrySet()){\n    println(idx++, \"->\", hex(colors.getKey(), 6), \"\\tcount:\", colors.getValue());\n    String hexColor = hex(colors.getKey(), 6);\n    System.out.println(hexColor);\n    palette[n]= color(Integer.parseInt(hexColor, 16));\n    n++;\n  }\n \n  println();\n  println(dominantMap, ENTER);\n  println(dominantArr);\n*/\n}\n \nvoid draw() {\n  //background(randomPixels(pic, VARIATION));\n  background(0);\n  image(pic, 0,0);\n  \n\n  for(int i=0; i<QTY; i++){\n    fill(palette[i]); //fill(color(16776959));\n    rect(10 + 50*i + 10*i, 10, 50, 50);\n  }\n}\n\n\nMap<Integer, Integer> sortByValue(Map<Integer, Integer> unsortMap) {\n\n        // 1. Convert Map to List of Map\n        List<Map.Entry<Integer, Integer>> list =\n                new LinkedList<Map.Entry<Integer, Integer>>(unsortMap.entrySet());\n\n        // 2. Sort list with Collections.sort(), provide a custom Comparator\n        Collections.sort(list, new Comparator<Map.Entry<Integer, Integer>>() {\n            public int compare(Map.Entry<Integer, Integer> o1,\n                               Map.Entry<Integer, Integer> o2) {\n                return (o2.getValue()).compareTo(o1.getValue());\n            }\n        });\n\n        // 3. Loop the sorted list and put it into a new insertion order Map LinkedHashMap\n        Map<Integer, Integer> sortedMap = new LinkedHashMap<Integer, Integer>();\n        for (Map.Entry<Integer, Integer> entry : list) {\n            sortedMap.put(entry.getKey(), entry.getValue());\n        }\n\n        return sortedMap;\n}\n\n \nMap<Integer, Integer> countColorsIntoMap(PImage img) {\n  Map<Integer, Integer> map = new HashMap<Integer, Integer>();\n\n  img.loadPixels();\n  for (color c: img.pixels) {\n    //System.out.println(hex(c));\n    if(map.containsKey(c)){\n      int count = map.get(c);\n      map.put(c, count+1);\n    }\n    else {\n      map.put(c,1);\n    }\n  }\n  return map;\n}",
+			"file": "utils 01/build/build.pde",
+			"file_size": 3297,
+			"file_write_time": 131817349351807883,
 			"settings":
 			{
-				"buffer_size": 102,
+				"buffer_size": 3109,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Windows",
+				"name": "/**"
 			}
 		}
 	],
@@ -403,12 +418,13 @@
 	[
 		"/D/GITHUB/Colorama",
 		"/D/GITHUB/Colorama/Colorama",
-		"/D/GITHUB/Colorama/Colorama/colorama 01",
-		"/D/GITHUB/Colorama/Colorama/colorama 01/build",
-		"/D/GITHUB/Colorama/Colorama/data"
+		"/D/GITHUB/Colorama/Colorama/data",
+		"/D/GITHUB/Colorama/Colorama/utils 01"
 	],
 	"file_history":
 	[
+		"/D/GITHUB/Colorama/Colorama/colorama 01/build/Color.pde",
+		"/D/GITHUB/Colorama/Colorama/colorama 01/build/PaletteImage.pde",
 		"/D/GITHUB/Colorama/Colorama/colorama 01/build/ColorImage.pde",
 		"/D/GITHUB/Colorama/Colorama/colorama 01/ColorImage.pde",
 		"/D/GITHUB/Colorama/Colorama/colorama 01/build.pde",
@@ -537,7 +553,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -553,8 +569,8 @@
 						"selection":
 						[
 							[
-								551,
-								551
+								490,
+								490
 							]
 						],
 						"settings":
@@ -655,8 +671,8 @@
 								{
 									"1":
 									[
-										858,
-										859
+										860,
+										861
 									]
 								},
 								"icon":
@@ -671,8 +687,8 @@
 								{
 									"1":
 									[
-										550,
-										551
+										488,
+										489
 									]
 								},
 								"unmatched":
@@ -681,206 +697,102 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
 							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 432.0,
+						"translation.y": 288.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "colorama 01/build/PaletteImage.pde",
+					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2381,
+						"buffer_size": 447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2330,
-								2330
+								242,
+								242
 							]
 						],
 						"settings":
 						{
-							"auto_name": "class Palette {",
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										1884,
-										1885
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										1881,
-										1882
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
 							"bracket_highlighter.locations":
 							{
 								"close":
 								{
-									"1":
-									[
-										2329,
-										2330
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										2328,
-										2329
-									]
 								},
 								"unmatched":
 								{
@@ -888,66 +800,66 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
-							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage"
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1872.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -955,106 +867,34 @@
 				},
 				{
 					"buffer": 2,
-					"file": "colorama 01/build/Color.pde",
+					"file": "utils 01/build/build.pde",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 102,
+						"buffer_size": 3109,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								97,
-								97
+								687,
+								690
 							]
 						],
 						"settings":
 						{
+							"auto_name": "/**",
 							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone": 15,
 							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
-							],
-							"bracket_highlighter.locations":
 							{
 								"close":
 								{
 									"1":
 									[
-										99,
-										100
+										802,
+										803
 									]
 								},
 								"icon":
@@ -1069,36 +909,21 @@
 								{
 									"1":
 									[
-										79,
-										80
+										445,
+										446
 									]
 								},
 								"unmatched":
 								{
 								}
 							},
-							"bracket_highlighter.regions":
+							"bracket_highlighter.clone_regions":
 							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -1109,16 +934,26 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -1129,19 +964,99 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
-								"bh_angle_content"
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
-							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage"
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 536.8,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1180,7 +1095,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 169.0
+		"height": 180.0
 	},
 	"output.find_results":
 	{
