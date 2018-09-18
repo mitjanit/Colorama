@@ -17,19 +17,23 @@ void setup() {
   unsortMap = countColorsIntoMap(pic);
   println("Unique colors found:" + unsortMap.size() + "\tfrom:" + pic.width*pic.height);
   int idx=0;
+  /*
   for (Map.Entry<Integer, Integer> entry : unsortMap.entrySet()) {
     println("Key : " + hex(entry.getKey()) + " Value : " + entry.getValue());
     if (++idx == 100)  break;
   }
+  */
 
   sortedMap = sortByValue(unsortMap);
+
   idx=0;
   println("Top "+numColors+" colors:");
   for (Map.Entry<Integer, Integer> entry : sortedMap.entrySet()) {
-    println("Key : " + hex(entry.getKey()) + " Value : " + entry.getValue());
+    println(idx+") Color: " + hex(entry.getKey()) + ", Times: " + entry.getValue());
     palette[idx]=entry.getKey();
     if (++idx == numColors)  break;
   }
+  
 }
  
 void draw() {
