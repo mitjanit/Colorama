@@ -6,6 +6,7 @@ int    sceneHeight  = 800;
 color  bgColor    = #ECECEC;
 
 String[] fileNames	= {"sea01.jpg", 	"forest01.jpg", 	"rainbow01.jpg"};
+String pathDATA = "../../data/";
 int current = 0;
 PImage img; 
 
@@ -41,7 +42,7 @@ void draw() {
 }
 
 void displayImageAt(String fileName, float x, float y, float w, float h){
-  img = loadImage(fileName);
+  img = loadImage(pathDATA + fileName);
   image(img, x, y, w, h);
 }
 
@@ -69,7 +70,7 @@ void mousePressed(){
 	if(current>=fileNames.length){
 		current=0;
 	}
-	 img = loadImage(fileNames[current]);
+	 img = loadImage(pathDATA + fileNames[current]);
 	palette = t.getPalette((BufferedImage) img.getImage(), numColors, quality, ignoreWhite);
 
 }

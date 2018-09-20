@@ -1,17 +1,24 @@
  
 import java.util.*;
 
+int    sceneWidth   = 800;
+int    sceneHeight  = 600;
+color  bgColor    = #ECECEC;
+String pathDATA = "../../data/";
+
  
 int numColors = 10;
 Map<Integer, Integer> unsortMap, sortedMap;
 PImage pic;
 color[] palette;
  
-void setup() {
+void settings() {
+  size(sceneWidth,sceneHeight,P2D);
+}
 
-  size(800, 600);
+void setup(){
 
-  pic = loadImage("rainbow01.jpg");
+  pic = loadImage(pathDATA + "rainbow01.jpg");
   palette = new color[numColors];
 
   unsortMap = countColorsIntoMap(pic);
