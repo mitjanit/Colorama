@@ -9,13 +9,11 @@
 <h2>Exemples</h2>
 <table borde="0">
 	<tr>
-		<td><img src="/colorama 01/build/frame/colorama01-000157.png" />
-		</td>
+		<td><img src="/colorama 01/build/frame/colorama01-000157.png" /></td>
 		<td>a)Paleta de colors aleatoris fluent.</td>
 	</tr>
 	<tr>
-		<img src="/colorama 02/build/frame/colorama02-000386.png" />
-		</td>
+		<td><img src="/colorama 02/build/frame/colorama02-000386.png" /></td>
 		<td>b)Paleta de colors equidistants fluent.</td>
 	</tr>
 	<tr>
