@@ -5,7 +5,7 @@ int    sceneWidth   = 1600;
 int    sceneHeight  = 1000;
 color  bgColor    = #ECECEC;
 String pathDATA = "../../data/";
-String[] fileNames	= {"color_map_001.png"};
+String[] fileNames	= {"color_map_003.png"};
 
 //********************** Color Management ***********************//
 int numColors = 5;
