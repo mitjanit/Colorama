@@ -14,7 +14,7 @@
 		<td><img src="/colorama 02/build/frame/colorama02-000386.png" />
 		b)Paleta de colors equidistants fluent.</td>
 		<td><img src="/colorama 01/build/frame/colorama01-000157.png" />
-		a)Paleta de colors aleatoris fluent.</td>
+		c)Paleta de colors aleatoris fluent.</td>
 	</tr>
 </table>
 <ol>
