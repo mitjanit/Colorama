@@ -7,14 +7,20 @@
 </ul>
 
 <h2>Exemples</h2>
-<table>
+<table borde="0">
 	<tr>
 		<td><img src="/colorama 01/build/frame/colorama01-000157.png" />
-		a)Paleta de colors aleatoris fluent.</td>
-		<td><img src="/colorama 02/build/frame/colorama02-000386.png" />
-		b)Paleta de colors equidistants fluent.</td>
-		<td><img src="/colorama 03/build/frame/colorama03-000117.png" />
-		c)Paletes de diferents números de colors fluents.</td>
+		</td>
+		<td>a)Paleta de colors aleatoris fluent.</td>
+	</tr>
+	<tr>
+		<img src="/colorama 02/build/frame/colorama02-000386.png" />
+		</td>
+		<td>b)Paleta de colors equidistants fluent.</td>
+	</tr>
+	<tr>
+		<td><img src="/colorama 03/build/frame/colorama03-000117.png" /></td>
+		<td>c)Paletes de diferents números de colors fluents.</td>
 	</tr>
 </table>
 <ol>
