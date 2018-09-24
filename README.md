@@ -13,8 +13,8 @@
 		a)Paleta de colors aleatoris fluent.</td>
 		<td><img src="/colorama 02/build/frame/colorama02-000386.png" />
 		b)Paleta de colors equidistants fluent.</td>
-		<td><img src="/colorama 01/build/frame/colorama01-000157.png" />
-		c)Paleta de colors aleatoris fluent.</td>
+		<td><img src="/colorama 03/build/frame/colorama01-000117.png" />
+		c)Paletes de diferents números de colors fluents.</td>
 	</tr>
 </table>
 <ol>
