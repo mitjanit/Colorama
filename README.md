@@ -9,7 +9,7 @@
 <h2>Exemples</h2>
 <table border="0" style="border-width: 0px;">
 	<tr>
-		<td><img src="/colorama 01/build/frame/colorama01-000157.png" /></td>
+		<td><img src="/colorama 01/build/frame/colorama01-000157.png" width="300px" /></td>
 		<td>a)Paleta de colors aleatoris fluent.</td>
 	</tr>
 	<tr>
