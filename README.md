@@ -11,8 +11,10 @@
 	<tr>
 		<td><img src="/colorama 01/build/frame/colorama01-000157.png" />
 		a)Paleta de colors aleatoris fluent.</td>
-		<td><img src="/colorama 01/build/frame/colorama01-000157.png" /></td>
-		<td><img src="/colorama 01/build/frame/colorama01-000157.png" /></td>
+		<td><img src="/colorama 01/build/frame/colorama01-000157.png" />
+		a)Paleta de colors aleatoris fluent.</td>
+		<td><img src="/colorama 01/build/frame/colorama01-000157.png" />
+		a)Paleta de colors aleatoris fluent.</td>
 	</tr>
 </table>
 <ol>
