@@ -7,6 +7,14 @@
 </ul>
 
 <h2>Exemples</h2>
+<table>
+	<tr>
+		<td><img src="/colorama 01/build/frame/colorama01-000157.png" />
+		a)Paleta de colors aleatoris fluent.</td>
+		<td><img src="/colorama 01/build/frame/colorama01-000157.png" /></td>
+		<td><img src="/colorama 01/build/frame/colorama01-000157.png" /></td>
+	</tr>
+</table>
 <ol>
 	<li>Paleta de colors aleatoris fluent.</li>
 	<p> Colors extrets d'una imatge de forma aleatòria.</p>
