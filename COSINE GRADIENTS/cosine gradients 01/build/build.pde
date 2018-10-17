@@ -1,11 +1,12 @@
-
+//*************************************************************//
+//		COSINE GRADIENTS
+//
 //********************** Basic Settings ***********************//
 
 int    sceneWidth   = 1920;
 int    sceneHeight  = 1000;
 color  bgColor    = #ECECEC;
-String pathDATA = "../../data/";
-String[] fileNames	= {"color_map_001.png"};
+String pathDATA = "../../../data/";
 
 //********************** Color Management ***********************//
 
@@ -91,8 +92,6 @@ void draw(){
 		cpBlue.displayInfo(new PVector(xgLabel, 1.5*graphMarginTop + 2*graphH/3), "BLUE");
 
 	}
-
-	
 
 	displayGradient(gradientOrigin, gradientW, 2*gradientH, cpRed, cpGreen, cpBlue);
 }
