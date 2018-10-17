@@ -77,7 +77,7 @@ class PaletteImage {
 	void displayPointer(int n){
 		PVector p = pos.get(n);
 		float x = map(p.x, 0, img.width, 0, sceneWidth);
-		float y = map(p.y, 0, img.height, 0, sceneHeight);
+		float y = map(p.y, 0, img.height, 0, sceneHeight/2);
 		stroke(0);
 		fill(palette.get(n).getColor());
 		ellipseMode(CENTER);
