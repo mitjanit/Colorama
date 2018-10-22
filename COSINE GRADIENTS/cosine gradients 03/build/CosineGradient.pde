@@ -113,6 +113,13 @@ class CosineGradient {
 		}
 	}
 
+	void displayGradientCurve(PVector orig, float w, float h){
+		displayGradient(orig, w, h);
+		PVector o = new PVector(orig.x, orig.y + h);
+		cpRed.displayGraph(o, w, h, RED, false);
+		cpGreen.displayGraph(o, w, h, GREEN, false);
+		cpBlue.displayGraph(o, w, h, BLUE, false);
+	}
 
 	void disableAll(){
 		enableRed 		= false;
@@ -124,117 +131,117 @@ class CosineGradient {
 
 	boolean changedFreq(float f){
 		if(enableRed){
-			return cg.cpRed.freq!=f;
+			return this.cpRed.freq!=f;
 		}
 		else if(enableGreen){
-			return cg.cpGreen.freq != f;
+			return this.cpGreen.freq != f;
 		}
 		else if(enableBlue){
-			return cg.cpBlue.freq != f;
+			return this.cpBlue.freq != f;
 		}
 		return false;
 	}
 
 	boolean changedOffset(float f){
 		if(enableRed){
-			return cg.cpRed.offset!=f;
+			return this.cpRed.offset!=f;
 		}
 		else if(enableGreen){
-			return cg.cpGreen.offset != f;
+			return this.cpGreen.offset != f;
 		}
 		else if(enableBlue){
-			return cg.cpBlue.offset != f;
+			return this.cpBlue.offset != f;
 		}
 		return false;
 	}
 
 	void setFreq(float value){
 		if(enableRed){
-			cg.cpRed.freq = value;
+			this.cpRed.freq = value;
 		}
 		else if(enableGreen){
-			cg.cpGreen.freq = value;
+			this.cpGreen.freq = value;
 		}
 		else if(enableBlue){
-			cg.cpBlue.freq = value;
+			this.cpBlue.freq = value;
 		}
 		updatable = true;
 	}
 
 	void setPhase(float value){
 		if(enableRed){
-			cg.cpRed.phase = value;
+			this.cpRed.phase = value;
 		}
 		else if(enableGreen){
-			cg.cpGreen.phase = value;
+			this.cpGreen.phase = value;
 		}
 		else if(enableBlue){
-			cg.cpBlue.phase = value;
+			this.cpBlue.phase = value;
 		}
 		updatable = true;
 	}
 
 	void setOffset(float value){
 		if(enableRed){
-			cg.cpRed.offset = value;
+			this.cpRed.offset = value;
 		}
 		else if(enableGreen){
-			cg.cpGreen.offset = value;
+			this.cpGreen.offset = value;
 		}
 		else if(enableBlue){
-			cg.cpBlue.offset = value;
+			this.cpBlue.offset = value;
 		}
 		updatable = true;
 	}
 
 	void changePhase(float value){
 		if(enableRed){
-			cg.cpRed.phase += value;
+			this.cpRed.phase += value;
 		}
 		else if(enableGreen){
-			cg.cpGreen.phase += value;
+			this.cpGreen.phase += value;
 		}
 		else if(enableBlue){
-			cg.cpBlue.phase += value;
+			this.cpBlue.phase += value;
 		}
 		updatable = true;
 	}
 
 	void changeFreq(float value){
 		if(enableRed){
-			cg.cpRed.freq += value;
+			this.cpRed.freq += value;
 		}
 		else if(enableGreen){
-			cg.cpGreen.freq += value;
+			this.cpGreen.freq += value;
 		}
 		else if(enableBlue){
-			cg.cpBlue.freq += value;
+			this.cpBlue.freq += value;
 		}
 		updatable = true;
 	}
 
 	void changeOffset(float value){
 		if(enableRed){
-			cg.cpRed.offset += value;
+			this.cpRed.offset += value;
 		}
 		else if(enableGreen){
-			cg.cpGreen.offset += value;
+			this.cpGreen.offset += value;
 		}
 		else if(enableBlue){
-			cg.cpBlue.offset += value;
+			this.cpBlue.offset += value;
 		}
 		updatable = true;
 	}
 
 	void changeAmp(float value){
 		if(enableRed){
-			cg.cpRed.amp += value;
+			this.cpRed.amp += value;
 		}
 		else if(enableGreen){
-			cg.cpGreen.amp += value;
+			this.cpGreen.amp += value;
 		}
 		else if(enableBlue){
-			cg.cpBlue.amp += value;
+			this.cpBlue.amp += value;
 		}
 		updatable = true;
 	}

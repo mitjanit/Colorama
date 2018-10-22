@@ -54,7 +54,7 @@ class CosineComp {
 		values = new float[this.n];
 		for(int i=0; i<this.n; i++){
 			float v = constrain(offset + amp*cos(i*freq+phase), -amp, amp);
-			values[i] = map(v, -amp, amp, 0, 255);
+			values[i] = v; //map(v, -amp, amp, 0, 255);
 		}
 	}
 
@@ -83,14 +83,25 @@ class CosineComp {
 
 		float x0 = orig.x;
 		float x = x0;
+		float d = (255-amp)/255.0;
+
+		float minH = (orig.y - d*h);
+		float maxH = (orig.y - h + d*h);
+		//float y0 = map (values[0], -amp, amp, minH, maxH);
+
 		float y0 = map (values[0], 0, 255, orig.y, orig.y - h);
+		
 		point(x0, y0);
 
 		stroke(c);
 		for(int i=0; i<n; i++){
 			x += wp;
 			float y = values[i];
-			float v = map(y, 0, 255, orig.y, orig.y - h);
+			//float v = map(y, 0, 255, orig.y, orig.y - h);
+			//float d = map(amp, 0, 255, )
+			float v = map(y, -amp, amp, orig.y, orig.y - h);
+			//float v = map(y, 255/2 - amp, 255/2 + amp , orig.y, orig.y - h);
+			//float v = map (values[0], -amp, amp, minH, maxH);
 			point(x, v);
 			line(x0, y0, x, v);
 			x0 = x; y0 = v;

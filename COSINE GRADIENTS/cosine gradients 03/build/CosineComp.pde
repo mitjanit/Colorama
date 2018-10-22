@@ -125,6 +125,7 @@ class CosineComp {
 		}
 	}
 
+
 	void displayInfo(PVector pos, String label){
 		float yStep = 20;
 		float topMargin=10, leftMargin = 10;

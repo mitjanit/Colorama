@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"num",
+				"numGradients"
+			],
+			[
+				"Cos",
+				"CosineGradient"
+			],
+			[
+				"C",
+				"CosineGradient"
+			],
+			[
+				"upda",
+				"updatable"
+			],
+			[
 				"upd",
 				"updatable"
 			],
@@ -48,10 +64,6 @@
 				"displayGraph"
 			],
 			[
-				"Cos",
-				"CosineComp"
-			],
-			[
 				"fr",
 				"freq"
 			],
@@ -74,10 +86,6 @@
 			[
 				"min",
 				"numMinColors"
-			],
-			[
-				"num",
-				"numColors"
 			],
 			[
 				"displa",
@@ -399,6 +407,23 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "COSINE GRADIENTS/cosine gradients 03/build/build.pde",
+			"settings":
+			{
+				"buffer_size": 1851,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "COSINE GRADIENTS/cosine gradients 03/build/CosineComp.pde",
+			"settings":
+			{
+				"buffer_size": 3044,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/Processing/Build Systems/Processing.sublime-build",
 	"build_system_choices":
@@ -475,18 +500,38 @@
 	[
 		"/D/GITHUB/Colorama",
 		"/D/GITHUB/Colorama/Colorama",
+		"/D/GITHUB/Colorama/Colorama/colorama 01",
+		"/D/GITHUB/Colorama/Colorama/colorama 01/build",
+		"/D/GITHUB/Colorama/Colorama/colorama 04",
+		"/D/GITHUB/Colorama/Colorama/colorama 04/build",
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS",
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS/cosine gradients 03",
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS/cosine gradients 03/build",
+		"/D/GITHUB/Colorama/Colorama/utils 01",
+		"/D/GITHUB/Colorama/Colorama/utils 01/build",
+		"/D/GITHUB/Colorama/Colorama/utils 02",
+		"/D/GITHUB/Colorama/Colorama/utils 02/build",
+		"/D/GITHUB/Colorama/Colorama/utils 03",
 		"/D/GITHUB/Colorama/Colorama/utils 04",
 		"/D/GITHUB/Colorama/Colorama/utils 04/build",
 		"/D/GITHUB/Colorama/Colorama/utils 04/build/output"
 	],
 	"file_history":
 	[
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS/cosine gradients 03/build/CosineGradient.pde",
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS/cosine gradients 03/build/CosineComp.pde",
+		"/D/GITHUB/Colorama/Colorama/colorama 04/build/build.pde",
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS/cosine gradients 02 - oop/build/build.pde",
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS/cosine gradients 02 - oop/build/CosineComp.pde",
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS/cosine gradients 02 - oop/build/CosineGradient.pde",
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS/cosine gradients 01/build/CosineGradient.pde",
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS/cosine gradients 01/build/build.pde",
+		"/D/GITHUB/Colorama/Colorama/COSINE GRADIENTS/cosine gradients 01/build/CosineComp.pde",
 		"/D/GITHUB/Colorama/Colorama/colorama 05 - cosine gradients/build/build.pde",
 		"/D/GITHUB/Colorama/Colorama/colorama 05 - cosine gradients/build/CosineComp.pde",
 		"/D/GITHUB/Colorama/Colorama/colorama 05 - cosine gradients/build/CosineGradient.pde",
 		"/D/GITHUB/Colorama/Colorama/colorama 03/build/build.pde",
 		"/D/GITHUB/Colorama/Colorama/colorama 02/build/build.pde",
-		"/D/GITHUB/Colorama/Colorama/colorama 04/build/build.pde",
 		"/C/Users/ToniMitjanit/Desktop/exportacioDadesCentre.xml",
 		"/D/GITHUB/Colorama/Colorama/colorama 01/build/build.pde",
 		"/D/GITHUB/WEB/WEB/JAVASCRIPT/EXEMPLES/64 - IF statement.html",
@@ -600,12 +645,11 @@
 		"/D/NATURE of CODE/Unit 01 - Random Walkers/walker 01/build/Walker.pde",
 		"/C/Windows/System32/drivers/etc/hosts",
 		"/C/Users/ToniMitjanit/Desktop/cd_catalog.xml",
-		"/C/wamp/apps/phpmyadmin3.5.1/config.inc.php",
-		"/D/NATURE of CODE/Unit 01 - Random Walkers/random 01/build/build.pde"
+		"/C/wamp/apps/phpmyadmin3.5.1/config.inc.php"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -648,18 +692,330 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "COSINE GRADIENTS/cosine gradients 03/build/build.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								415,
+								415
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1363,
+										1364
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										665,
+										666
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 174.4,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "COSINE GRADIENTS/cosine gradients 03/build/CosineComp.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								806,
+								806
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										834,
+										835
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										804,
+										805
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/Processing/Syntaxes/Processing.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2913.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 40.0
+		"height": 43.0
 	},
 	"input":
 	{
-		"height": 74.4
+		"height": 79.0
 	},
 	"layout":
 	{
@@ -686,7 +1042,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 168.0
+		"height": 150.0
 	},
 	"output.find_results":
 	{
@@ -700,7 +1056,7 @@
 	"project": "colorama.sublime-project",
 	"replace":
 	{
-		"height": 76.0
+		"height": 82.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -720,7 +1076,7 @@
 		[
 			[
 				"",
-				"D:\\GITHUB\\DotSystem\\DotSystem\\dotsystem-project.sublime-project"
+				"D:\\GITHUB\\WEB\\WEB\\web.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -742,7 +1098,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 258.0,
+	"side_bar_width": 299.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
