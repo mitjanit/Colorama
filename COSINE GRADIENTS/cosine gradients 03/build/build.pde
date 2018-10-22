@@ -12,7 +12,7 @@ String pathDATA = "../../../data/";
 
 int num = 500;
 ArrayList<CosineGradient> cgs;
-int numGradients = 12;
+int numGradients = 16;
 
 //********************** Basic Settings ***********************//
 
@@ -28,11 +28,12 @@ void setup(){
 	for(int i=0; i<numGradients; i++){
 		CosineGradient cg = new CosineGradient(num);
 		float offset=0, amp=0, freq=0, phase=0;
+
 		for(int k=0; k<3; k++){
 			offset = random(-50, 50);
-			amp = random(20*i, 255);
-			freq = random(PI/200, PI/1500);
-			phase = PI/2*i;
+			amp = random(200, 255);
+			freq = (PI/1500)*(i+1);
+			phase = PI/2*(k-i);
 			if(k==0){
 				cg.setRed(new CosineComp(num, offset, amp, freq, phase));
 			}
@@ -45,9 +46,11 @@ void setup(){
 			
 
 		}
-		/*cg.setRed(new CosineComp(num, offset, amp, freq, phase));
-			cg.setGreen(new CosineComp(num, offset, amp, freq, phase));
-			cg.setBlue(new CosineComp(num, offset, amp, freq, phase));*/
+		/*
+		cg.setRed(new CosineComp(num, offset, amp, freq, phase));
+		cg.setGreen(new CosineComp(num, offset, amp, freq, phase));
+		cg.setBlue(new CosineComp(num, offset, amp, freq, phase));
+		*/
 		cg.update();
 		cgs.add(cg);
 	}
@@ -64,9 +67,9 @@ void draw(){
 		cg.displayGradient(orig, w, h);
 		//cg.displayGradientCurve(orig, w, h);
 
-		cg.cpRed.phase+=0.05;
-		cg.cpGreen.phase-=0.025;
-		cg.cpBlue.phase-=0.0125;
+		//cg.cpRed.phase+=0.05;
+		//cg.cpGreen.phase-=0.025;
+		//cg.cpBlue.phase-=0.0125;
 
 		cg.update();
 	}
