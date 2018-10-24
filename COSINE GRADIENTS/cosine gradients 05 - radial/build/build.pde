@@ -12,7 +12,7 @@ String pathDATA = "../../../data/";
 
 int num = 500;
 ArrayList<CosineGradient> cgs;
-int numGradients = 24;
+int numGradients = 1;
 
 //********************** Basic Settings ***********************//
 
@@ -31,8 +31,8 @@ void setup(){
 
 		for(int k=0; k<3; k++){
 			offset = random(-50, 50);
-			amp = random(200, 255);
-			freq = (PI/1500)*(i+1);
+			amp = random(220, 255);
+			freq = (PI/500)*(i+1);
 			phase = PI/2*(k-i);
 			if(k==0){
 				cg.setRed(new CosineComp(num, offset, amp, freq, phase));
@@ -46,10 +46,6 @@ void setup(){
 			
 
 		}
-		/*
-		cg.setRed(new CosineComp(num, offset, amp, freq, phase));
-		cg.setGreen(new CosineComp(num, offset, amp, freq, phase));
-		cg.setBlue(new CosineComp(num, offset, amp, freq, phase));*/
 		
 		cg.update();
 		cgs.add(cg);
@@ -58,16 +54,13 @@ void setup(){
 }
 
 void draw(){
-	background(bgColor);
+	background(bgColor); noStroke();
 	for(int i=0; i<cgs.size(); i++){
 		CosineGradient cg = cgs.get(i);
-		float w = width;
-		float h = height / (float)cgs.size();
-		PVector orig = new PVector(0, h*i);
-		PVector orig2 = new PVector(w/2, h*i);
-		cg.displayGradient(orig, w/2, h);
-		cg.displayGradientInv(orig2, w/2, h);
-		//cg.displayGradientCurve(orig, w, h);
+		for(int v=cg.values.length-1; v>=0; v--){
+			fill(cg.values[v]);
+			ellipse(width/2, height/2, v*2, v*2);
+		}
 
 		cg.cpRed.phase+=0.05;
 		cg.cpGreen.phase-=0.025;
