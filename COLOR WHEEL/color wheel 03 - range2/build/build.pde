@@ -7,10 +7,12 @@ color  bgColor    = #ECECEC;
 String pathDATA = "../../data/";
 
 //********************** Color Management ***********************//
-int numColors = 12;
+int numColors = 64;
 int selSector = -1;
 
 ColorWheel cw;
+float hue1 = 90;
+float hue2 = 270;
 //********************** Basic Settings ***********************//
 
 void settings() {
@@ -22,19 +24,22 @@ void setup(){
 	colorMode(HSB, 360, 100, 100);
 	smooth();
 
-	cw = new ColorWheel(numColors, 200, 80);
+	cw = new ColorWheel(numColors, hue1, hue2);
 	cw.setColors();
 }
 
 void draw(){
 	background(bgColor);
 	cw.display(new PVector(width/2, height/2), 800);
-	//cw.displaySelColors(new PVector(100,100), 50);
-	//cw.highlightColors();
-	fill(200,100,100);
+	cw.displaySelColors(new PVector(100,100), 50);
+	cw.highlightColors();
+	
+	fill(hue1,100,100);
 	rect(1800, 50, 50, 50);
-	fill(80, 100, 100);
+	fill(hue2, 100, 100);
 	rect(1800, 100, 50, 50);
+
+
 }
 
 
@@ -43,16 +48,23 @@ void keyPressed(){
 		saveFrame("frame/colorwheel01-######.png");
 	}
 	else if(key=='n'){
-		cw.selectRandomColors(3);
+		cw.selectRandomColors(6);
 	}
 	else if(key=='d'){
-		cw.selectDistantColors(5);
+		cw.selectDistantColors(6);
 	}
 	else if(key=='c'){
 		cw.selectCompColors();
 	}
+	else if(key=='a'){
+		color ct = color(random(cw.hueStart, cw.hueEnd), 100, 100);
+		cw.selectAnalogColors(ct, 5);
+	}
 	else if(key=='x'){
 		cw.deSelectColors();
+	}
+	else if(key=='z'){
+		cw.displaceColors(map(mouseX, 0, width, 0, 100));
 	}
 }
 

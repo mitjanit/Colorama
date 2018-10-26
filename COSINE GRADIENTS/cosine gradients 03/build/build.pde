@@ -12,7 +12,7 @@ String pathDATA = "../../../data/";
 
 int num = 500;
 ArrayList<CosineGradient> cgs;
-int numGradients = 24;
+int numGradients = 14;
 
 //********************** Basic Settings ***********************//
 
@@ -32,8 +32,8 @@ void setup(){
 		for(int k=0; k<3; k++){
 			offset = random(-50, 50);
 			amp = random(200, 255);
-			freq = (PI/1500)*(i+1);
-			phase = PI/2*(k-i);
+			freq = random(PI/500, PI/1500); //(PI/1500)*(i+1);
+			phase = random(PI/2, PI/10); //*(k-i);
 			if(k==0){
 				cg.setRed(new CosineComp(num, offset, amp, freq, phase));
 			}
@@ -65,13 +65,13 @@ void draw(){
 		float h = height / (float)cgs.size();
 		PVector orig = new PVector(0, h*i);
 		PVector orig2 = new PVector(w/2, h*i);
-		cg.displayGradient(orig, w/2, h);
-		cg.displayGradientInv(orig2, w/2, h);
+		cg.displayGradient(orig, w, h);
+		//cg.displayGradientInv(orig2, w/2, h);
 		//cg.displayGradientCurve(orig, w, h);
 
 		cg.cpRed.phase+=0.05;
-		cg.cpGreen.phase-=0.025;
-		cg.cpBlue.phase-=0.0125;
+		//cg.cpGreen.phase-=0.025;
+		//cg.cpBlue.phase-=0.0125;
 
 		cg.update();
 	}

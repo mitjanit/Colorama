@@ -12,6 +12,7 @@ class ColorWheel {
 
 	ArrayList<Color> selColors;
 
+	float analogDist = 10;
 
 	ColorWheel(int n){
 		this.numColors = n;
@@ -40,6 +41,13 @@ class ColorWheel {
 		for(int numSector=0; numSector<wheelColors.length; numSector++){
 			float hue = hueStart + hueStep*numSector;
 			wheelColors[numSector]=color(hue%360.0, 100, 100);
+		}
+	}
+
+	void displaceColors(float amount){
+		for(int n = 0; n<wheelColors.length; n++){
+			float newHue = (hue(wheelColors[n]) + amount) % 360;
+			wheelColors[n] = color(newHue, 100, 100);
 		}
 	}
 
@@ -77,13 +85,34 @@ class ColorWheel {
 		float a = random(hueStart, hueEnd);
 		selColors = new ArrayList<Color>();
 		for(int i=0; i<num; i++){
-			println(i+") ANG: "+a);
 			color ct = color(a, 100, 100);
 			selColors.add(new Color(ct));
 			a += angDist;
 			if(a>hueEnd){
 				a = (a - hueEnd) + hueStart;
 			}
+		}
+	}
+
+	void selectAnalogColors(color c, int num){
+		float hue = hue(c);
+		selColors = new ArrayList<Color>();
+		selColors.add(new Color(c));
+		int n=0;
+		while(selColors.size()<num){
+			for(int i=0; i<2; i++){
+				float step = analogDist*(n+1) * ((i%2==0)?1:-1);
+				float tHue = hue + step;
+				if(tHue>hueEnd){
+					tHue = (tHue - hueEnd) + hueStart;
+				}
+				else if(tHue<hueStart){
+					tHue = hueEnd - (hueStart - tHue);
+				}
+				color ct = color(tHue, 100, 100);
+				selColors.add(new Color(ct));
+			}
+			n++;
 		}
 	}
 
@@ -134,6 +163,8 @@ class ColorWheel {
 			int ns = this.getSectorOf(c.getColor());
 			highlightSector(ns);
 		}
+		fill(bgColor); noStroke();
+		ellipse(center.x,center.y, radius/3, radius/3);
 	}
 
 	void highlightColor(color c){

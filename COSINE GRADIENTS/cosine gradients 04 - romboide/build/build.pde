@@ -32,14 +32,14 @@ void setup(){
 		for(int k=0; k<3; k++){
 			offset = random(-50, 50);
 			amp = random(220, 255);
-			if(i<numGradients/2){
-				freq = (PI/500)*(i+1);
+			//if(i<numGradients/2){
+				freq = (PI/5000)*(i+1);
 				phase = PI/2*(k-i);
-			}
+			/*}
 			else {
 				freq = (PI/500)*(i - numGradients);
 				phase = PI/2*(k-i - numGradients/2);
-			}
+			}*/
 			if(k==0){
 				cg.setRed(new CosineComp(num, offset, amp, freq, phase));
 			}
