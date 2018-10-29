@@ -31,7 +31,7 @@ void draw(){
 		}
 		xoff+= inc;
 	}
-	zoff=frameCount/10.0; //inc*5;
+	zoff=frameCount/5.0; //inc*5;
 }
 
 void mousePressed(){
