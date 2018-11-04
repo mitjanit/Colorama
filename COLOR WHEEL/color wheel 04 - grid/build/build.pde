@@ -24,7 +24,7 @@ void settings() {
 
 void setup(){
 	background(bgColor);
-	colorMode(HSB, 360, 100, 255);
+	colorMode(HSB, 360, 255, 255);
 	smooth();
 
 	cg = new ColorGrid(numColors, numBrights, hue1, hue2, bri1, bri2);
@@ -47,14 +47,22 @@ void keyPressed(){
 		cg.selectRandomColors(6);
 	}
 	else if(key=='d'){
-		cg.selectDistantColors(6);
+		cg.selectDistantColors(5);
 	}
 	else if(key=='c'){
 		cg.selectCompColors();
 	}
 	else if(key=='a'){
-		color ct = color(random(cg.hueStart, cg.hueEnd), 100, 100);
+		float h = random(cg.hueStart, cg.hueEnd);
+		float b = random(cg.brightStart, cg.brightEnd);
+		color ct = color(h, 255, b);
 		cg.selectAnalogColors(ct, 5);
+	}
+	else if(key=='m'){
+		float h = random(cg.hueStart, cg.hueEnd);
+		float b = random(cg.brightStart, cg.brightEnd);
+		color ct = color(h, 255, b);
+		cg.selectMonoColors(ct, 5);
 	}
 	else if(key=='x'){
 		cg.deSelectColors();
@@ -62,10 +70,18 @@ void keyPressed(){
 	else if(key=='z'){
 		cg.displaceColors(map(mouseX, 0, width, 0, 100));
 	}
+	else if(keyCode==DOWN){
+		cg.lighterColors();
+	}
+	else if(keyCode==UP){
+		cg.darkerColors();
+	}
 }
 
 void mousePressed(){
-	color ct = color(random(cg.hueStart, cg.hueEnd), 100, 100);
+	float h = random(cg.hueStart, cg.hueEnd);
+	float b = random(cg.brightStart, cg.brightEnd);
+	color ct = color(h, 255, b);
 	Color c = new Color(ct);
 	cg.addSelectedColor(ct);
 }

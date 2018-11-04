@@ -11,7 +11,8 @@ class ColorGrid {
 
 	ArrayList<Color> selColors;
 
-	float analogDist = 10;
+	float analogDist = 50;
+	float monoDist = 30;
 
 	ColorGrid(int nc, int nb){
 		this.numColors = nc;
@@ -89,30 +90,38 @@ class ColorGrid {
 			color ct = color(h, 255, b);
 			PVector ns = getSectorOf(ct);
 			if(ns!=null && !selectedSector(ct)){
-				selColors.add(new Color(ct));
+				//selColors.add(new Color(ct));
+				selColors.add(new Color(h,255,b));
 				println("ADDED COLOR: "+h+", "+b);
 			}
 		}
+
+		Collections.sort(selColors);
 	}
 
 	void selectDistantColors(int num){
-		float angDist = abs(hueEnd - hueStart) / (float) num;
-		float a = random(hueStart, hueEnd);
+		float d = abs(hueEnd - hueStart) / (float) num;
+		float h = random(hueStart, hueEnd);
+		float b = random(brightStart, brightEnd);
 		selColors = new ArrayList<Color>();
 		for(int i=0; i<num; i++){
-			color ct = color(a, 100, 100);
-			selColors.add(new Color(ct));
-			a += angDist;
-			if(a>hueEnd){
-				a = (a - hueEnd) + hueStart;
+			color ct = color(h, 255, b);
+			//selColors.add(new Color(ct));
+			selColors.add(new Color(h, 255, b));
+			h += d;
+			if(h>hueEnd){
+				h = (h - hueEnd) + hueStart;
 			}
 		}
+		Collections.sort(selColors);
 	}
 
 	void selectAnalogColors(color c, int num){
 		float hue = hue(c);
+		float b = brightness(c);
 		selColors = new ArrayList<Color>();
-		selColors.add(new Color(c));
+		selColors.add(new Color(hue, 255, b));
+		//selColors.add(new Color(c));
 		int n=0;
 		while(selColors.size()<num){
 			for(int i=0; i<2; i++){
@@ -124,11 +133,40 @@ class ColorGrid {
 				else if(tHue<hueStart){
 					tHue = hueEnd - (hueStart - tHue);
 				}
-				color ct = color(tHue, 100, 100);
-				selColors.add(new Color(ct));
+				//color ct = color(tHue, 255, b);
+				selColors.add(new Color(tHue, 255, b));
 			}
 			n++;
 		}
+		Collections.sort(selColors);
+	}
+
+	void selectMonoColors(color c, int num){
+		float hue = hue(c);
+		float b = brightness(c);
+		
+		selColors = new ArrayList<Color>();
+		selColors.add(new Color(hue, 255, b));
+		
+		int n=0;
+		while(selColors.size()<num){
+			for(int i=0; i<2; i++){
+				float step = monoDist*(n+1) * ((i%2==0)?1:-1);
+				float tBright = b + step;
+				if(tBright>brightEnd){
+					tBright = (tBright - brightEnd) + brightStart;
+				}
+				else if(tBright<brightStart){
+					tBright = brightEnd - (brightStart - tBright);
+				}
+				//color ct = color(tHue, 255, b);
+				selColors.add(new Color(hue, 255, tBright));
+			}
+			n++;
+		}
+
+		Collections.sort(selColors);
+
 	}
 
 	void selectCompColors(){
@@ -159,6 +197,26 @@ class ColorGrid {
 		selColors.clear();
 	}
 
+	void lighterColors(){
+		for(Color c : selColors){
+			float b = c.b;
+			println("Original B: "+b);
+			b+=brightStep;
+			b = constrain(b, brightStart+1, brightEnd-1);
+			println("Displaced B: "+b);
+			c.setBrightness(b);
+		}
+	}
+
+	void darkerColors(){
+		for(Color c : selColors){
+			float b = c.b;
+			b-=brightStep;
+			b = constrain(b, brightStart+1, brightEnd-1);
+			c.setBrightness(b);
+		}
+	}
+
 
 	PVector getSectorOf(color c){
 		if(hue(c)<hueStart || hue(c)>hueEnd){
@@ -175,7 +233,9 @@ class ColorGrid {
 	}
 
 	color getColorAtSector(PVector n){
-		return wheelColors[(int)n.x][(int)n.y];
+		int x = constrain((int)n.x, 0, wheelColors.length-1);
+		int y = constrain((int)n.y, 0, wheelColors[0].length-1);
+		return wheelColors[x][y];
 	}
 
 	void highlightColors(PVector o, float w, float h){
@@ -191,7 +251,9 @@ class ColorGrid {
 		float hStep = h / (float)numBrights;
 		pushStyle();
 			stroke(0, 0, 255);
-			fill(wheelColors[(int)ns.x][(int)ns.y]);
+			int x = constrain((int)ns.x, 0, wheelColors.length-1);
+			int y = constrain((int)ns.y, 0, wheelColors[0].length-1);
+			fill(wheelColors[x][y]);
 			rect(o.x + wStep*ns.x, o.y + hStep*ns.y, wStep, hStep);
 		popStyle();
 	}
@@ -205,7 +267,7 @@ class ColorGrid {
 			fill(ct);
 			rect(p.x + i*(s+20), p.y , s, s);
 			fill(0);
-			text(nf(hue(ct),3,2), p.x + i*(s+20), p.y - 10 );
+			text(nf(c.h,3,2), p.x + i*(s+20), p.y - 10 );
 			
 
 			PVector ns = getSectorOf(c.getColor());
