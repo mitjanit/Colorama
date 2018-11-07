@@ -1,11 +1,13 @@
 
+import java.util.*;
 
 class ColorGrid {
 	
 	float hueStart, hueEnd;
 	float brightStart, brightEnd;
+	float saturateStart, saturateEnd;
 	int numColors, numBrights;
-	float hueStep, brightStep;
+	float hueStep, brightStep, saturateStep;
 	color[][] wheelColors;
 
 
@@ -20,6 +22,8 @@ class ColorGrid {
 		this.hueStart = 0.0;
 		this.hueEnd = 360.0;
 		this.hueStep = 360.0 / (float)nc;
+		this.saturateStart = 0.0;
+		this.saturateEnd = 255.0;
 		selColors = new ArrayList<Color>();
 	}
 
@@ -28,6 +32,9 @@ class ColorGrid {
 		this.numBrights = nb;
 		this.hueStart = hStart;
 		this.hueEnd = hEnd;
+		this.saturateStart = 0.0;
+		this.saturateEnd = 255.0;
+		this.saturateStep = 10.0;
 		if(hStart<hEnd){
 			this.hueStep = (hEnd - hStart) / (float)nc;
 		}
@@ -90,13 +97,12 @@ class ColorGrid {
 			color ct = color(h, 255, b);
 			PVector ns = getSectorOf(ct);
 			if(ns!=null && !selectedSector(ct)){
-				//selColors.add(new Color(ct));
 				selColors.add(new Color(h,255,b));
-				println("ADDED COLOR: "+h+", "+b);
 			}
 		}
 
-		Collections.sort(selColors);
+		selColors.sort(new ColorHueComparator());
+
 	}
 
 	void selectDistantColors(int num){
@@ -113,7 +119,7 @@ class ColorGrid {
 				h = (h - hueEnd) + hueStart;
 			}
 		}
-		Collections.sort(selColors);
+		selColors.sort(new ColorHueComparator());
 	}
 
 	void selectAnalogColors(color c, int num){
@@ -138,7 +144,7 @@ class ColorGrid {
 			}
 			n++;
 		}
-		Collections.sort(selColors);
+		selColors.sort(new ColorHueComparator());
 	}
 
 	void selectMonoColors(color c, int num){
@@ -165,8 +171,62 @@ class ColorGrid {
 			n++;
 		}
 
-		Collections.sort(selColors);
+		selColors.sort(new ColorHueComparator());
 
+	}
+
+	void selectMonoCompColors(int num){
+
+		// Monos for color c
+		float d = abs(hueEnd - hueStart) / (float) (num+1);
+		float h = random(hueStart, hueEnd);
+		float b = random(brightStart, brightEnd);
+		
+		selColors = new ArrayList<Color>();
+		selColors.add(new Color(h, 255, b));
+		
+		int n=0;
+		while(n<num){
+			for(int i=0; i<2; i++){
+				float step = monoDist*(n+1) * ((i%2==0)?1:-1);
+				float tBright = b + step;
+				if(tBright>brightEnd){
+					tBright = (tBright - brightEnd) + brightStart;
+				}
+				else if(tBright<brightStart){
+					tBright = brightEnd - (brightStart - tBright);
+				}
+				selColors.add(new Color(h, 255, tBright));
+			}
+			n++;
+		}
+
+		// Monos for color comp
+		h += d;
+		if(h>hueEnd){
+			h = (h - hueEnd) + hueStart;
+		}
+		selColors.add(new Color(h, 255, b));
+		
+		n=0;
+		while(n<num){
+			for(int i=0; i<2; i++){
+				float step = monoDist*(n+1) * ((i%2==0)?1:-1);
+				float tBright = b + step;
+				if(tBright>brightEnd){
+					tBright = (tBright - brightEnd) + brightStart;
+				}
+				else if(tBright<brightStart){
+					tBright = brightEnd - (brightStart - tBright);
+				}
+				//color ct = color(tHue, 255, b);
+				selColors.add(new Color(h, 255, tBright));
+			}
+			n++;
+		}
+
+		//Sorting
+		selColors.sort(new ColorHueComparator());
 	}
 
 	void selectCompColors(){
@@ -199,22 +259,34 @@ class ColorGrid {
 
 	void lighterColors(){
 		for(Color c : selColors){
-			float b = c.b;
-			println("Original B: "+b);
-			b+=brightStep;
+			float b = c.b + brightStep;
 			b = constrain(b, brightStart+1, brightEnd-1);
-			println("Displaced B: "+b);
 			c.setBrightness(b);
 		}
 	}
 
 	void darkerColors(){
 		for(Color c : selColors){
-			float b = c.b;
-			b-=brightStep;
+			float b = c.b - brightStep;
 			b = constrain(b, brightStart+1, brightEnd-1);
 			c.setBrightness(b);
 		}
+	}
+
+	void saturateColors(){
+		for(Color c : selColors){
+			float s = c.s + saturateStep;
+			s = constrain(s, saturateStart+1, saturateEnd-1);
+			c.setSaturation(s);
+		}	
+	}
+
+	void desaturateColors(){
+		for(Color c : selColors){
+			float s = c.s - saturateStep;
+			s = constrain(s, saturateStart+1, saturateEnd-1);
+			c.setSaturation(s);
+		}	
 	}
 
 

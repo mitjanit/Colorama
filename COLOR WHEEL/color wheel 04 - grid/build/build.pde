@@ -8,13 +8,13 @@ String pathDATA = "../../data/";
 
 //********************** Color Management ***********************//
 int numColors = 36;
-int numBrights = 18;
+int numBrights = 24;
 int selSector = -1;
 
 ColorGrid cg;
 float hue1 = 0;
-float hue2 = 270;
-float bri1 = 50;
+float hue2 = 180;
+float bri1 = 90;
 float bri2 = 255;
 //********************** Basic Settings ***********************//
 
@@ -52,6 +52,9 @@ void keyPressed(){
 	else if(key=='c'){
 		cg.selectCompColors();
 	}
+	else if(key=='v'){
+		cg.selectMonoCompColors(1);
+	}
 	else if(key=='a'){
 		float h = random(cg.hueStart, cg.hueEnd);
 		float b = random(cg.brightStart, cg.brightEnd);
@@ -75,6 +78,12 @@ void keyPressed(){
 	}
 	else if(keyCode==UP){
 		cg.darkerColors();
+	}
+	else if(keyCode==LEFT){
+		cg.desaturateColors();
+	}
+	else if(keyCode==RIGHT){
+		cg.saturateColors();
 	}
 }
 

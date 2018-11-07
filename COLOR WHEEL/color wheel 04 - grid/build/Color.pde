@@ -1,6 +1,7 @@
 import java.util.Collections;
 
-class Color implements Comparable<Color> {
+class Color {
+//class Color implements Comparable<Color> {
 	
 	float h, s, b;
 	color c;
@@ -24,28 +25,18 @@ class Color implements Comparable<Color> {
 		return color(h, s, b);
 	}
 
+	void setHue(float h){
+		this.h = h;
+		this.c = color(h, s, b);
+	}
+
+	void setSaturation(float s){
+		this.s = s;
+		this.c = color(h, s, b);
+	}
 
 	void setBrightness(float b){
 		this.b = b;
 		this.c = color(h, s, b);
-	}
-
-
-	@Override
-	public int compareTo(Color other) {
-
-		int distH = (int)(this.h - other.h);
-		int distB = (int)(this.b - other.b);
-
-		if(distH!=0){
-			return (int)(this.h - other.h);
-		}
-		else if(distB!=0){
-			return (int)(this.b - other.b);
-		}
-		else {	
-			return (int)(this.s - other.s);
-		}
-
 	}
 }
